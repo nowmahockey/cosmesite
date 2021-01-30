@@ -1,0 +1,574 @@
+$fontMS: 'Montserrat',
+sans-serif;
+$fontYG: "游ゴシック",
+"Yu Gothic",
+"游ゴシック体",
+YuGothic,
+sans-serif;
+$fontColor1: #ffffff;
+$fontColor2: #000000;
+
+
+/*--------------------------------------------------ボディ----------------------------------------------------------------*/
+
+/*コンテンツ幅*/
+.inner {
+  width: 1004px;
+  margin: 0 auto;
+}
+
+/*-------------------------------------------------ヘッダーセクション------------------------------------------------------------*/
+
+/*ヘッダー背景*/
+.mainvisual {
+  background: url(./images/header_BG.jpg) center no-repeat;
+  background-size: cover;
+  height: 806px;
+  width: 100%;
+  margin: 0 auto;
+  color: $fontColor1;
+}
+
+.header {
+
+  // &-top-line{
+  //   justify-content: space-between;
+  // }
+
+  // &-logo h1{
+  //   display: inline;
+  // }
+
+  // &-logo-txt {
+  //   font-family: $fontMS;
+  //   font-size: 20px;
+  //   font-weight: bold;
+  //   text-align: left;
+  //   letter-spacing: 1px;
+  //   margin-bottom: 8px;
+  // }
+
+  // &-logo-caption {
+  //   font-family: $fontYG;
+  //   font-size: 0.75rem;
+  //   font-weight: bold;
+  //   text-align: left;
+  //   letter-spacing: 0.6;
+  // }
+
+  /*ナビゲーション*/
+
+  &-nav-list {
+    font-size: 18px;
+    display: flex;
+    list-style: none;
+    
+  }
+
+  &-li {
+    margin: 30px 27px 0 36px;
+  }
+
+  &-li:hover {
+    border-bottom: solid 2px $fontColor1;
+  }
+
+  &-li a{
+    color: $fontColor1;
+  }
+
+  /*ヘッダーコピー*/
+  &-catchcopy {
+    position: absolute;
+    top: 280px;
+    
+  }
+
+  &-catchcopy-main {
+    font-family: $fontMS;
+    display: inline-block;
+    margin-bottom: 23px;
+    line-height: 1.25;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    color: $fontColor1;
+  }
+
+  &-catchcopy-caption {
+    font-family: $fontYG;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1.2;
+    text-align: left;
+    color: $fontColor1;
+  }
+
+  &-arrow{
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+  }
+  
+  &-arrow::before{
+    content: '';
+    width: 6px;
+    height: 6px;
+    border: 0px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -4px;
+  }
+}
+
+
+/*-------------------------------------------------メイン-----------------------------------------------------------------*/
+
+
+.ttl {
+
+  /*見出し*/
+  &-body {
+    font-family: $fontMS;
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 58px;
+    text-align: left;
+    letter-spacing: 0.96px;
+    color: $fontColor2;
+  }
+
+  /*見出し(約)*/
+  &-cap {
+    font-family: $fontYG;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1em;
+    color: $fontColor2;
+  }
+}
+
+main {
+  color: black;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+/*------------------------------------------------アバウトセクション------------------------------------------------------------*/
+
+.About {
+  &-inner {
+    display: flex;
+    width: 1004px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 161px;
+  }
+
+  &-wrap {
+    border: solid 1px #707070;
+    background-color: #f2f2f2;
+    padding: 77px 45px 30px 68px;
+  }
+
+  &-ttl-body {
+    position: relative;
+  }
+
+  &-ttl-body::after {
+    content: "";
+    display: block;
+    width: 69px;
+    height: 5px;
+    background-color: #000000;
+    position: absolute;
+    bottom: -10px;
+  }
+
+  &-ttl-cap {
+    margin-top: 30px;
+  }
+
+  &-shopttl {
+    font-family: $fontMS;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 43px;
+
+  }
+
+  &-shoptxt {
+    font-family: $fontYG;
+    font-size: 1em;
+    text-align: left;
+    width: 305px;
+    margin-top: 23px;
+    line-height: 2.0;
+  }
+}
+
+/*--------------------------------------------アイテムセクション---------------------------------------------------------------*/
+.Item {
+
+  &-box {
+    padding-top: 183px;
+  }
+
+  &-ttl-cap {
+    margin-top: 28px;
+  }
+
+  &-ttl-body {
+    position: relative;
+  }
+
+  &-ttl-body::after {
+    content: "";
+    display: block;
+    width: 69px;
+    height: 5px;
+    background-color: #000000;
+    position: absolute;
+    bottom: -10px;
+  }
+
+  &-wrap {
+    display: flex;
+    margin-top: 23px;
+  }
+
+  &-card1,
+  &-card2 {
+    margin-right: 16px;
+  }
+
+  &-category1,
+  &-category2,
+  &-category3 {
+    font-family: $fontMS;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 0.32px;
+    margin-top: 23px;
+  }
+
+  &-name1,
+  &-name2,
+  &-name3 {
+    font-family: $fontMS;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: 0.48;
+  }
+
+  &-name1 {
+    margin-top: 40px;
+  }
+
+  &-name2 {
+    height: 81px;
+  }
+
+  &-name2,
+  &-name3 {
+    margin-top: 34px;
+  }
+
+  &-name3 {
+    line-height: 29px;
+  }
+
+  &-name-txt1,
+  &-name-txt2,
+  &-name-txt3 {
+    font-family: $fontYG;
+    font-size: 1em;
+    text-align: left;
+    letter-spacing: 0.48;
+    line-height: 2.0;
+    height: 125px;
+  }
+
+  &-name-txt1 {
+    margin-top: 18px;
+    margin-bottom: 193px;
+  }
+
+  &-name-txt3 {
+    text-align: center;
+    margin-top: 27px;
+  }
+}
+
+/*-----------------------------------------------プライスセクション------------------------------------------------------------------*/
+.Price {
+
+  width: 1280px;
+
+  &-inner {
+    background: url(./images/Price-background.jpg) no-repeat;
+    // background-size: 663px 884px;
+    width: 1004px;
+    // margin: 0 auto;
+    height: 1000px;
+    margin-bottom: 149px;
+    background-position: top 93px right 0;
+  }
+
+  &-wrap {
+    background-color: #ffffff;
+    opacity: 0.7;
+    border: solid 5px #A38787;
+    width: 494px;
+  }
+
+  &-ttl-cap {
+    display: block;
+    padding-top: 18px;
+    padding-left: 210px;
+  }
+
+  &-ttl-body {
+    display: inline-block;
+    position: relative;
+    padding-left: 178px;
+    padding-top: 55px;
+  }
+
+  &-ttl-body::after {
+    content: "";
+    display: block;
+    width: 69px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    bottom: -10px;
+    left: 200px;
+  }
+
+  &-table {
+    margin: 63px 85px 67.4px 85px;
+    width: 324px;
+  }
+
+  &-tr {
+    border-bottom: dashed 1px #707070;
+  }
+
+  &-tr:last-child {
+    border-bottom: none;
+  }
+}
+
+.p {
+  &-name {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+    font-family: $fontYG;
+    font-weight: bold;
+    line-height: 1.7;
+    text-align: left;
+  }
+
+  &-price {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+    font-family: $fontYG;
+    font-weight: bold;
+    line-height: 1.7;
+    text-align: right;
+  }
+}
+
+/*-----------------------------------------------------ブログセクション-------------------------------------------------------------*/
+.Blog {
+  background-color: #f2f2f2;
+  background-size: cover;
+  margin: 0 auto;
+  width: 1280px;
+
+  &-inner {
+    padding-top: 136px;
+    padding-bottom: 137px;
+  }
+
+  &-ttl-cap {
+    margin-bottom: 62px;
+  }
+
+  &-ttl-body {
+    position: relative;
+    margin-bottom: 41px;
+  }
+
+  &-ttl-body::after {
+    content: "";
+    display: block;
+    width: 69px;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    bottom: -20px;
+  }
+
+  &-cards {
+    display: flex;
+  }
+
+  &-card1,
+  &-card2 {
+    margin-right: 16px;
+  }
+
+  &-card1,
+  &-card2,
+  &-card3 {
+    text-align: left;
+  }
+
+  & span p {
+    color: $fontColor1;
+    ;
+    display: inline-block;
+  }
+
+  &-card-day {
+    font-family: $fontMS;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.16px;
+    height: 19px;
+    margin-top: 29px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  &-card-category {
+    font-family: $fontYG;
+    font-size: 1em;
+    letter-spacing: 0.16px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  &-card-txt {
+    margin-top: 10px;
+    font-family: $fontYG;
+    font-size: 1em;
+    letter-spacing: 0.16px;
+    font-size: medium;
+  }
+
+  &-cg1 {
+    margin-left: 16px;
+  }
+
+  &-cg2 {
+    margin-left: 29px;
+  }
+
+  &-cg3 {
+    margin-left: 33px;
+  }
+}
+
+/*----------------------------------------------------------アクセスセクション---------------------------------------------------------*/
+.Access {
+
+  &-inner {
+    padding-top: 140px;
+
+  }
+
+  &-ttl-cap {
+    margin-bottom: 93px;
+  }
+
+  &-ttl-body {
+    position: relative;
+    margin-bottom: 53px;
+  }
+
+  &-ttl-body::after {
+    content: "";
+    display: block;
+    width: 69px;
+    height: 5px;
+    background-color: #000000;
+    position: absolute;
+    bottom: -30px;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-box {
+    padding: 152px 115px 219px 138px;
+  }
+
+  &-box-ttl {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 751px;
+    line-height: 1.7;
+    margin-bottom: 31px;
+  }
+
+  &-box-txt {
+    font-family: $fontYG;
+    font-size: 1em;
+    line-height: 1.7;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+    margin-bottom: 31px;
+  }
+
+  &-info-ttl {
+    font-family: $fontMS;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 13px;
+  }
+
+  &-info-cap {
+    font-family: $fontYG;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 35px;
+  }
+}
+
+/*------------------------------------------------フッター---------------------------------------------------------------*/
+.f {
+
+  &-inner {
+    color: $fontColor1;
+    font-weight: bold;
+    font-size: 5em;
+    letter-spacing: 0.05;
+    padding-top: 77px;
+    padding-bottom: 90px;
+    background-color: #6F6565;
+    margin: 0 auto;
+    font-family: $fontMS;
+    width: 1280px;
+  }
+
+  &-text {
+    text-align: center;
+  }
+}
