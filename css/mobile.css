@@ -2,67 +2,68 @@
 /*--------------------------------------------------ボディ----------------------------------------------------------------*/
 /*コンテンツ幅*/
 .inner {
-  width: 1004px;
+  width: 345px;
   margin: 0 auto;
 }
 
 /*-------------------------------------------------ヘッダーセクション------------------------------------------------------------*/
 /*ヘッダー背景*/
 .mainvisual {
-  background: url(../images/header_BG.jpg) center no-repeat;
+  background: url(./images/header_BG.jpg) center no-repeat;
   background-size: cover;
-  height: 806px;
-  width: 100%;
-  margin: 0 auto;
+  height: 673px;
+  margin: 0;
   color: #ffffff;
 }
 
-
-.header-top-line{
+.header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.header-logo{
-  margin-top: 36px;
-  margin-left: 40px;
+.header-logo {
+  padding: 36px 0 0 40px;
 }
-.header-logo-txt{
+
+.header-logo-txt {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: bold;
-}
-.header-logo-caption{
-  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic,sans-serif;
-  font-size: 12px;
-  font-weight: bold;
+  text-align: left;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 
+.header-logo-caption {
+  font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: 0.6;
+}
 
 .header-nav-list {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  font-weight: 10;
+  font-size: 0.88rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  margin-top: 30px;
-  margin-right:27px;
-  width: 508px;
   list-style: none;
-  justify-content: space-between;
-}
-.header-li:hover {
-  border-bottom: solid 2px #ffffff;
-}
-.header-li a {
-  color: #ffffff;
 }
 
+.header-nav-list :hover {
+  border-bottom: solid 2px #000000;
+}
 
 .header-catchcopy {
   position: absolute;
   top: 360px;
-  left:138px
+  left: 138px;
 }
+
 .header-catchcopy-main {
   font-family: "Montserrat", sans-serif;
   display: inline-block;
@@ -71,35 +72,37 @@
   font-size: 4rem;
   font-weight: bold;
   text-align: left;
-  color: #ffffff;
+  color: #000000;
 }
+
 .header-catchcopy-caption {
   font-family: "游ゴシック", "Yu Gothic", "游ゴシック体", YuGothic, sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 1.2;
   text-align: left;
+  color: #000000;
+}
+
+.header-Arrow {
+  border-bottom: solid 10px #ffffff;
+  border-right: solid 10px #ffffff;
+  width: 30px;
+  height: 30px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: 650px auto;
+}
+
+.header a {
+  text-decoration: none;
   color: #ffffff;
 }
 
-
-.header-arrow {
-  position: relative;
-  display: inline-block;
-  padding-left: 20px;
-}
-.header-arrow::before {
-  content: '';
-  width: 27px;
-  height: 27px;
-  border: 10px;
-  border-top: solid 10px #ffffff;
-  border-right: solid 10px #ffffff;
-  transform: rotate(135deg);
-  position: absolute;
-  top: 94vh;
-  left: 48vw;
-  margin-top: -4px;
+.header li {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  margin: 30px 27px 0 36px;
 }
 
 /*-------------------------------------------------メイン-----------------------------------------------------------------*/
@@ -124,23 +127,17 @@
 
 main {
   color: black;
-  width: 1280px;
-  margin: 0 auto;
 }
 
 /*------------------------------------------------アバウトセクション------------------------------------------------------------*/
 .About-inner {
-  display: flex;
-  width: 1004px;
-    justify-content: space-between;
-    align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 161px;
-}
-
-.About-wrap {
-  border: solid 1px #707070;
-  background-color: #f2f2f2;
-  padding: 77px 45px 30px 68px;
 }
 
 .About-ttl-body {
@@ -178,6 +175,11 @@ main {
   line-height: 2.0;
 }
 
+.About-img {
+  width: 100%;
+  height: 100%;
+}
+
 /*--------------------------------------------アイテムセクション---------------------------------------------------------------*/
 .Item-box {
   padding-top: 183px;
@@ -202,14 +204,11 @@ main {
 }
 
 .Item-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-top: 23px;
 }
 
-.Item-card1, .Item-card2 {
-  margin-right: 16px;
+.Item-card3 {
+  display: none;
 }
 
 .Item-category1, .Item-category2, .Item-category3 {
@@ -256,7 +255,6 @@ main {
 
 .Item-name-txt1 {
   margin-top: 18px;
-  margin-bottom: 193px;
 }
 
 .Item-name-txt3 {
@@ -265,23 +263,30 @@ main {
 }
 
 /*-----------------------------------------------プライスセクション------------------------------------------------------------------*/
-.Price {
-  width: 1280px;
-}
-
 .Price-inner {
-  background: url(../images/Price-background.jpg) no-repeat;
+  background: url(./images/Price-background.jpg) no-repeat;
+  background-size: 663px 884px;
   width: 1004px;
+  margin: 0 auto;
   height: 1000px;
   margin-bottom: 149px;
   background-position: top 93px right 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .Price-wrap {
   background-color: #ffffff;
   opacity: 0.7;
   border: solid 5px #A38787;
-  width: 494px;
+  width: 339px;
 }
 
 .Price-ttl-cap {
@@ -345,8 +350,6 @@ main {
 .Blog {
   background-color: #f2f2f2;
   background-size: cover;
-  margin: 0 auto;
-  width: 1280px;
 }
 
 .Blog-inner {
@@ -501,7 +504,6 @@ main {
 }
 
 /*------------------------------------------------フッター---------------------------------------------------------------*/
-
 .f-inner {
   color: #ffffff;
   font-weight: bold;
@@ -510,12 +512,10 @@ main {
   padding-top: 77px;
   padding-bottom: 90px;
   background-color: #6F6565;
-  margin: 0 auto;
   font-family: "Montserrat", sans-serif;
-  width: 1280px;
 }
 
 .f-text {
   text-align: center;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=mobile.css.map */
